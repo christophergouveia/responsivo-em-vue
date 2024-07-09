@@ -1,0 +1,81 @@
+body,
+html {
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+
+.imagemUnica {
+  display: table;
+  width: 100%;
+}
+
+nav {
+  background-color: greenyellow;
+  padding: 1.2rem;
+  font-size: xx-large;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.imagem {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-container {
+  width: 100%;
+}
+
+iframe {
+  display: table;
+  margin: auto;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 1rem auto;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 688px) {
+  h1 {
+    font-size: 6vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  .container {
+    flex-direction: column;
+  }
+  td > img {
+    width: 100%;
+  }
+}
