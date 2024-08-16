@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import VideosPage from '../views/VideosView.vue'
+import HomePage from '@/views/HomePage.vue'
+import VideosPage from '@/views/VideosView.vue'
 import ImagensView from '@/views/ImagensView.vue'
 
 const router = createRouter({
@@ -14,17 +14,17 @@ const router = createRouter({
     {
       path: '/videos',
       name: 'videos',
-      component: () => VideosPage
+      component: VideosPage
     },
     {
       path: '/imagens',
       name: 'imagens',
-      component: () => ImagensView
+      component: ImagensView
     },
     {
       path: '/tabela',
       name: 'tabela',
-      component: () => import('../views/TabelaView.vue')
+      component: import('../views/TabelaView.vue')
     }
   ]
 })
