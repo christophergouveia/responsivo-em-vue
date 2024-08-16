@@ -1,31 +1,28 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '@/views/HomePage.vue'
-import VideosPage from '@/views/VideosView.vue'
-import ImagensView from '@/views/ImagensView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
-  mode: 'history',
-  history: createWebHistory(import.meta.env.BASE_URL),
+  mode: 'hash',
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomePage
+      component: () => import('@/views/HomePage.vue')
     },
     {
       path: '/videos',
       name: 'videos',
-      component: VideosPage
+      component: () => import('@/views/VideosView.vue')
     },
     {
       path: '/imagens',
       name: 'imagens',
-      component: ImagensView
+      component: () => import('@/views/ImagensView.vue')
     },
     {
       path: '/tabela',
       name: 'tabela',
-      component: import('@/views/TabelaView.vue')
+      component: () => import('@/views/TabelaView.vue')
     },
     {
       path: '/:pathMatch(.*)*',
