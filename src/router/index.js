@@ -4,6 +4,7 @@ import VideosPage from '@/views/VideosView.vue'
 import ImagensView from '@/views/ImagensView.vue'
 
 const router = createRouter({
+  mode: 'history',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -24,7 +25,12 @@ const router = createRouter({
     {
       path: '/tabela',
       name: 'tabela',
-      component: import('../views/TabelaView.vue')
+      component: import('@/views/TabelaView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: '404',
+      component: () => import('@/views/404View.vue')
     }
   ]
 })
