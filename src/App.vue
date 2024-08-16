@@ -6,9 +6,11 @@ document.title = 'Aula de responsividade'
 <template>
   <header>
     <div class="wrapper">
-      <nav>
+      <nav style="display: flex; gap: 24px">
         <RouterLink to="/">Página Inicial</RouterLink>
-        <RouterLink to="/about"></RouterLink>
+        <RouterLink to="/videos">Videos</RouterLink>
+        <RouterLink to="/tabela">Tabela</RouterLink>
+        <RouterLink to="/imagens">Imagens</RouterLink>
       </nav>
     </div>
   </header>
